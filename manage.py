@@ -8,6 +8,7 @@ def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Learning_Rest_Api.settings')
     try:
+        sys.path.append('/usr/local/lib/python3.8/dist-packages')
         from django.core.management import execute_from_command_line
     except ImportError as exc:
         raise ImportError(
