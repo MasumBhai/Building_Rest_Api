@@ -5,14 +5,16 @@ from django.test import TestCase
 
 # Create your tests here.
 '''
-py manage.py createsuperuser
-py manage.py makemigrations
-py manage.py migrate --run-syncdb
-py manage.py collectstatic
-py manage.py test
-py manage.py runserver
+python manage.py createsuperuser
+python manage.py makemigrations
+python manage.py migrate --run-syncdb
+python manage.py collectstatic
+python manage.py test
+python manage.py runserver
 
-py manage.py migrate
+python manage.py migrate
+
+python manage.py flush
 
 heroku run python manage.py migrate
 heroku run python manage.py createsuperuser
@@ -25,12 +27,12 @@ heroku help
 vagrant up
 vagrant ssh
 cd /vagrant
+source ~/env/bin/activate
 cd ..
 dir
 ls
 cd ~
 python -m venv ~/env
-source ~/env/bin/activate
 deactivate
 sudo pip3 install -r requirements.txt
 python manage.py runserver 0.0.0.0:8000

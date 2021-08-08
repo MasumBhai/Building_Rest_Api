@@ -29,6 +29,7 @@ urlpatterns = [
                   path('', include('rest_api.urls')),
                   # path('', RedirectView.as_view(url='home/', permanent=True)),
                   path('admin/', admin.site.urls),
+                  path('api-auth/', include('rest_framework.urls')),
                   path('__debug__/', include(debug_toolbar.urls)),
                   path('summernote/', include('django_summernote.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
