@@ -26,12 +26,13 @@ admin.site.site_title = "Masum the Super Hero "
 admin.site.index_title = "Welcome Admin"
 
 urlpatterns = [
-                  path('', include('rest_api.urls')),
+                  path('api/', include('rest_api.urls')),
                   # path('', RedirectView.as_view(url='home/', permanent=True)),
                   path('admin/', admin.site.urls),
                   path('api-auth/', include('rest_framework.urls')),
                   path('__debug__/', include(debug_toolbar.urls)),
                   path('summernote/', include('django_summernote.urls')),
+                  path('i18n/', include('django.conf.urls.i18n')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

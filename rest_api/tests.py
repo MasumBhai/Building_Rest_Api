@@ -16,6 +16,9 @@ python manage.py migrate
 
 python manage.py flush
 
+django-admin makemessages -l bn
+django-admin compilemessages
+
 heroku run python manage.py migrate
 heroku run python manage.py createsuperuser
 
