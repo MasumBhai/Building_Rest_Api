@@ -21,6 +21,8 @@ from django.views.generic import RedirectView
 from django.conf.urls import include, url
 import debug_toolbar
 
+from rest_api.urls import router
+
 admin.site.site_header = "Superman Masum"
 admin.site.site_title = "Masum the Super Hero "
 admin.site.index_title = "Welcome Admin"
@@ -33,6 +35,7 @@ urlpatterns = [
                   path('__debug__/', include(debug_toolbar.urls)),
                   path('summernote/', include('django_summernote.urls')),
                   path('i18n/', include('django.conf.urls.i18n')),
+                  path('', include(router.urls))
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

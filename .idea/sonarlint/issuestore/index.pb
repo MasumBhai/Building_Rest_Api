@@ -11,3 +11,8 @@ S
 #rest_api/migrations/0001_initial.py,1\f\1fa524e6f20b687cac1621e37d4bdfeb2d8d4fce
 @
 requirements.txt,1\9\19359a61ae2446b51b549167b014da2fcf265768
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+7
+LICENSE,0\3\0398ccd0f49298b10a3d76a47800d2ebecd49859
